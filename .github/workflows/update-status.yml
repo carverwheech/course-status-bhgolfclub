@@ -32,7 +32,7 @@ jobs:
         run: |
           git config user.name "course-status-bot"
           git config user.email "actions@users.noreply.github.com"
+          git pull --rebase --autostash origin main
           git add course-status.xml course-status.svg
           git diff --staged --quiet || git commit -m "Update course status feed"
-          git pull --rebase --autostash origin main
           git push
