@@ -28,6 +28,7 @@ DOT_RADIUS = 9
 HEADLINE_SIZE = 23
 SUB_SIZE = 15
 LINE_HEIGHT = 19
+HEADLINE_GAP = 34  # vertical space between the headline and the sub-text below it
 
 
 def build_svg(status_text: str, sub_text: str, color: str) -> str:
@@ -56,7 +57,7 @@ def build_svg(status_text: str, sub_text: str, color: str) -> str:
         lines.append(current)
 
     headline_y = PADDING + HEADLINE_SIZE
-    sub_start_y = headline_y + 18
+    sub_start_y = headline_y + HEADLINE_GAP
     height = sub_start_y + max(1, len(lines)) * LINE_HEIGHT + PADDING
 
     sub_tspans = "".join(
