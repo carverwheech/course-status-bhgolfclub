@@ -13,6 +13,49 @@ from bs4 import BeautifulSoup
 
 SOURCE_URL = "https://www.brightongolf.co.uk/"
 OUTPUT_FILE = "course-status.xml"
+SVG_FILE = "course-status.svg"
+
+OPEN_COLOR = "#28a745"   # green
+CLOSED_COLOR = "#dc3545"  # red
+UNKNOWN_COLOR = "#6c757d"  # grey, for the "unavailable" fallback case
+
+
+def build_svg(status_text: str, sub_text: str, color: str) -> str:
+    """Renders a simple status card as SVG: colored dot + status line + wrapped sub line(s).
+    Width is fixed at 700 for predictable wrapping; height grows with the number of
+    sub-text lines so nothing gets clipped. DAKboard's Image block can scale it as needed."""
+    status_esc = escape(status_text)
+
+    # Simple word-wrap for the sub line, since SVG <text> doesn't wrap on its own
+    words = sub_text.split()
+    lines, current = [], ""
+    max_chars_per_line = 46
+    for word in words:
+        candidate = (current + " " + word).strip()
+        if len(candidate) > max_chars_per_line and current:
+            lines.append(current)
+            current = word
+        else:
+            current = candidate
+    if current:
+        lines.append(current)
+
+    line_height = 26
+    sub_start_y = 90
+    height = sub_start_y + max(1, len(lines)) * line_height + 10
+
+    sub_tspans = "".join(
+        f'<tspan x="30" dy="{0 if i == 0 else line_height}">{escape(line)}</tspan>'
+        for i, line in enumerate(lines)
+    )
+
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="700" height="{height}" viewBox="0 0 700 {height}">
+  <rect width="700" height="{height}" fill="none"/>
+  <circle cx="30" cy="45" r="14" fill="{color}"/>
+  <text x="60" y="55" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="bold" fill="{color}">{status_esc}</text>
+  <text x="30" y="{sub_start_y}" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#333333">{sub_tspans}</text>
+</svg>
+"""
 
 
 def build_feed(title: str, description: str) -> str:
@@ -39,7 +82,9 @@ def main():
         feed = build_feed("Course status unavailable", f"Could not reach site: {exc}")
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
             f.write(feed)
-        sys.exit(0)  # exit 0 so the workflow still commits the fallback feed
+        with open(SVG_FILE, "w", encoding="utf-8") as f:
+            f.write(build_svg("Status unavailable", "Could not reach the club site", UNKNOWN_COLOR))
+        sys.exit(0)  # exit 0 so the workflow still commits the fallback feed/image
 
     soup = BeautifulSoup(resp.text, "html.parser")
     status_span = soup.select_one(".andyShowWeatherAndCourseStatus .statusBox .updatedate")
@@ -48,6 +93,8 @@ def main():
         feed = build_feed("Course status unavailable", "Status block not found - site markup may have changed.")
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
             f.write(feed)
+        with open(SVG_FILE, "w", encoding="utf-8") as f:
+            f.write(build_svg("Status unavailable", "Site markup may have changed", UNKNOWN_COLOR))
         sys.exit(0)
 
     updated = status_span.get("data-original-title", "").strip()
@@ -66,6 +113,15 @@ def main():
     feed = build_feed(title, description)
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write(feed)
+
+    # SVG status card: strip the leading "Brighton & Hove Golf Course:" label
+    # so the headline stays short (e.g. "Course Open"), keep the rest as the sub line.
+    headline = "Course Open" if is_open else "Course Closed"
+    sub_line = re.sub(r"^Brighton & Hove Golf Course:\s*", "", full_text)
+    sub_line = re.sub(r"^Course (Open|Closed)\s*", "", sub_line, flags=re.IGNORECASE).strip()
+    color = OPEN_COLOR if is_open else CLOSED_COLOR
+    with open(SVG_FILE, "w", encoding="utf-8") as f:
+        f.write(build_svg(headline, sub_line, color))
 
 
 if __name__ == "__main__":
