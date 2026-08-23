@@ -19,17 +19,32 @@ OPEN_COLOR = "#28a745"   # green
 CLOSED_COLOR = "#dc3545"  # red
 UNKNOWN_COLOR = "#6c757d"  # grey, for the "unavailable" fallback case
 
+# Card canvas sized to match the actual DAKboard block (244 x 144 px), so the
+# SVG renders crisp at its native size instead of being drawn huge and then
+# scaled way down by object-fit: contain.
+CARD_WIDTH = 244
+PADDING = 12
+DOT_RADIUS = 9
+HEADLINE_SIZE = 23
+SUB_SIZE = 15
+LINE_HEIGHT = 19
+
 
 def build_svg(status_text: str, sub_text: str, color: str) -> str:
-    """Renders a simple status card as SVG: colored dot + status line + wrapped sub line(s).
-    Width is fixed at 700 for predictable wrapping; height grows with the number of
-    sub-text lines so nothing gets clipped. DAKboard's Image block can scale it as needed."""
+    """Renders a compact status card as SVG: colored dot + status line + wrapped
+    sub line(s), sized to CARD_WIDTH. Height grows with the number of wrapped
+    sub-text lines so nothing gets clipped; DAKboard's Image block (set to
+    Contain fit) scales the whole thing to fill the block."""
     status_esc = escape(status_text)
 
-    # Simple word-wrap for the sub line, since SVG <text> doesn't wrap on its own
+    # Simple word-wrap for the sub line, since SVG <text> doesn't wrap on its own.
+    # Rough average character width for a sans-serif font is ~0.55 * font-size.
     words = sub_text.split()
     lines, current = [], ""
-    max_chars_per_line = 46
+    available_width = CARD_WIDTH - 2 * PADDING
+    # 0.62 rather than the usual ~0.55 average-char-width factor, since this text
+    # is often heavy with ALL CAPS (wider per character than mixed case).
+    max_chars_per_line = max(10, int(available_width / (0.62 * SUB_SIZE)))
     for word in words:
         candidate = (current + " " + word).strip()
         if len(candidate) > max_chars_per_line and current:
@@ -40,20 +55,23 @@ def build_svg(status_text: str, sub_text: str, color: str) -> str:
     if current:
         lines.append(current)
 
-    line_height = 26
-    sub_start_y = 90
-    height = sub_start_y + max(1, len(lines)) * line_height + 10
+    headline_y = PADDING + HEADLINE_SIZE
+    sub_start_y = headline_y + 18
+    height = sub_start_y + max(1, len(lines)) * LINE_HEIGHT + PADDING
 
     sub_tspans = "".join(
-        f'<tspan x="30" dy="{0 if i == 0 else line_height}">{escape(line)}</tspan>'
+        f'<tspan x="{PADDING}" dy="{0 if i == 0 else LINE_HEIGHT}">{escape(line)}</tspan>'
         for i, line in enumerate(lines)
     )
 
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="700" height="{height}" viewBox="0 0 700 {height}">
-  <rect width="700" height="{height}" fill="none"/>
-  <circle cx="30" cy="45" r="14" fill="{color}"/>
-  <text x="60" y="55" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="bold" fill="{color}">{status_esc}</text>
-  <text x="30" y="{sub_start_y}" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#333333">{sub_tspans}</text>
+    dot_cx = PADDING + DOT_RADIUS
+    dot_cy = headline_y - HEADLINE_SIZE * 0.35
+    text_x = dot_cx + DOT_RADIUS + 8
+
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{CARD_WIDTH}" height="{height}" viewBox="0 0 {CARD_WIDTH} {height}" preserveAspectRatio="xMidYMid meet">
+  <circle cx="{dot_cx}" cy="{dot_cy}" r="{DOT_RADIUS}" fill="{color}"/>
+  <text x="{text_x}" y="{headline_y}" font-family="Arial, Helvetica, sans-serif" font-size="{HEADLINE_SIZE}" font-weight="bold" fill="{color}">{status_esc}</text>
+  <text x="{PADDING}" y="{sub_start_y}" font-family="Arial, Helvetica, sans-serif" font-size="{SUB_SIZE}" fill="#333333">{sub_tspans}</text>
 </svg>
 """
 
@@ -83,7 +101,7 @@ def main():
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
             f.write(feed)
         with open(SVG_FILE, "w", encoding="utf-8") as f:
-            f.write(build_svg("Status unavailable", "Could not reach the club site", UNKNOWN_COLOR))
+            f.write(build_svg("Status Unknown", "Could not reach the club site", UNKNOWN_COLOR))
         sys.exit(0)  # exit 0 so the workflow still commits the fallback feed/image
 
     soup = BeautifulSoup(resp.text, "html.parser")
@@ -94,7 +112,7 @@ def main():
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
             f.write(feed)
         with open(SVG_FILE, "w", encoding="utf-8") as f:
-            f.write(build_svg("Status unavailable", "Site markup may have changed", UNKNOWN_COLOR))
+            f.write(build_svg("Status Unknown", "Site markup may have changed", UNKNOWN_COLOR))
         sys.exit(0)
 
     updated = status_span.get("data-original-title", "").strip()
