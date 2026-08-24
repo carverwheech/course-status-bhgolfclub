@@ -6,6 +6,7 @@ The source page (brightongolf.co.uk/live4) blocks being shown in an iframe
 (X-Frame-Options), so it can't be embedded directly - this scrapes the
 server-rendered HTML instead, same trick as the course-status scraper."""
 
+import json
 import re
 import sys
 from datetime import datetime, timezone
@@ -17,6 +18,7 @@ from bs4 import BeautifulSoup
 
 SOURCE_URL = "https://www.brightongolf.co.uk/live4?page=0"
 OUTPUT_FILE = "club-diary.xml"
+JSON_FILE = "club-diary.json"
 
 
 def clean(text: str) -> str:
@@ -24,7 +26,7 @@ def clean(text: str) -> str:
 
 
 def collect_items(soup: BeautifulSoup, container_id: str, label: str):
-    """Pulls (title, description, section-label) tuples from a panel-column."""
+    """Pulls {section, date, title} dicts from a panel-column."""
     items = []
     container = soup.find(id=container_id)
     if container is None:
@@ -35,10 +37,7 @@ def collect_items(soup: BeautifulSoup, container_id: str, label: str):
         title = clean(h3.get_text()) if h3 else ""
         if not title:
             continue
-        summary_el = panel_item.find("div", class_="summary")
-        summary = clean(summary_el.get_text()) if summary_el else ""
-        description = f"{label}: {date_time}" + (f" \u2014 {summary}" if summary else "")
-        items.append((title, description))
+        items.append({"section": label, "date": date_time, "title": title})
     return items
 
 
@@ -54,9 +53,10 @@ def build_feed(items) -> str:
     if not items:
         parts.append("<item><title>No upcoming events found</title>"
                       "<description>Check the club website directly.</description></item>")
-    for title, description in items:
+    for it in items:
+        description = f"{it['section']}: {it['date']}"
         parts.append("<item>")
-        parts.append(f"<title>{escape(title)}</title>")
+        parts.append(f"<title>{escape(it['title'])}</title>")
         parts.append(f"<description>{escape(description)}</description>")
         parts.append(f"<pubDate>{pub_date}</pubDate>")
         parts.append("</item>")
@@ -92,14 +92,19 @@ def main():
                 f"Containers found: {found_ids}. "
                 f"Title tag: {soup.title.get_text(strip=True) if soup.title else 'none'}."
             )
-            feed = build_feed([("No upcoming events found", debug)])
+            feed = build_feed([{"section": "No upcoming events found", "date": "", "title": debug}])
+            json_out = {"updated": datetime.now(timezone.utc).isoformat(), "items": [], "error": debug}
         else:
             feed = build_feed(items)
+            json_out = {"updated": datetime.now(timezone.utc).isoformat(), "items": items}
     except Exception as exc:
-        feed = build_feed([("Diary unavailable", f"Could not reach site: {exc}")])
+        feed = build_feed([{"section": "Diary unavailable", "date": "", "title": f"Could not reach site: {exc}"}])
+        json_out = {"updated": datetime.now(timezone.utc).isoformat(), "items": [], "error": str(exc)}
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write(feed)
+    with open(JSON_FILE, "w", encoding="utf-8") as f:
+        json.dump(json_out, f, ensure_ascii=False, indent=2)
 
 
 if __name__ == "__main__":
