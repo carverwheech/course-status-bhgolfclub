@@ -15,7 +15,7 @@ from xml.sax.saxutils import escape
 import requests
 from bs4 import BeautifulSoup
 
-SOURCE_URL = "https://www.brightongolf.co.uk/live4"
+SOURCE_URL = "https://www.brightongolf.co.uk/live4?page=0"
 OUTPUT_FILE = "club-diary.xml"
 
 
