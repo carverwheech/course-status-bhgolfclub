@@ -66,7 +66,10 @@ def build_feed(items) -> str:
 
 def main():
     try:
-        resp = requests.get(SOURCE_URL, timeout=10, headers={"User-Agent": "BHGC-Kiosk/1.0"})
+        resp = requests.get(SOURCE_URL, timeout=10, headers={
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                          "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        })
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, "html.parser")
 
@@ -75,7 +78,21 @@ def main():
         items += collect_items(soup, "diary-thisweek", "This Week")
         items += collect_items(soup, "diary-nextweek", "Next Week")
 
-        feed = build_feed(items)
+        if not items:
+            # Diagnostic fallback: report what we actually got back, so we can
+            # tell "site blocked the request" apart from "genuinely no events".
+            found_ids = {
+                cid: (soup.find(id=cid) is not None)
+                for cid in ["diary-today", "diary-thisweek", "diary-nextweek", "diary-container"]
+            }
+            debug = (
+                f"HTTP {resp.status_code}, {len(resp.text)} bytes. "
+                f"Containers found: {found_ids}. "
+                f"Title tag: {soup.title.get_text(strip=True) if soup.title else 'none'}."
+            )
+            feed = build_feed([("No upcoming events found", debug)])
+        else:
+            feed = build_feed(items)
     except Exception as exc:
         feed = build_feed([("Diary unavailable", f"Could not reach site: {exc}")])
 
