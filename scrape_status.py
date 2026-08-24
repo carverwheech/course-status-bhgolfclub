@@ -72,7 +72,7 @@ def build_svg(status_text: str, sub_text: str, color: str) -> str:
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{CARD_WIDTH}" height="{height}" viewBox="0 0 {CARD_WIDTH} {height}" preserveAspectRatio="xMidYMid meet">
   <circle cx="{dot_cx}" cy="{dot_cy}" r="{DOT_RADIUS}" fill="{color}"/>
   <text x="{text_x}" y="{headline_y}" font-family="Arial, Helvetica, sans-serif" font-size="{HEADLINE_SIZE}" font-weight="bold" fill="{color}">{status_esc}</text>
-  <text x="{PADDING}" y="{sub_start_y}" font-family="Arial, Helvetica, sans-serif" font-size="{SUB_SIZE}" fill="#333333">{sub_tspans}</text>
+  <text x="{PADDING}" y="{sub_start_y}" font-family="Arial, Helvetica, sans-serif" font-size="{SUB_SIZE}" fill="#ffffff">{sub_tspans}</text>
 </svg>
 """
 
