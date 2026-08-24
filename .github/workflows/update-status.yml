@@ -36,6 +36,6 @@ jobs:
           git config user.name "course-status-bot"
           git config user.email "actions@users.noreply.github.com"
           git pull --rebase --autostash origin main
-          git add course-status.xml course-status.svg club-diary.xml
+                    git add course-status.xml course-status.svg club-diary.xml club-diary.json
           git diff --staged --quiet || git commit -m "Update course status feed"
           git push
