@@ -1,65 +1,90 @@
 {
-  "updated": "2026-08-29T22:14:40.732969+00:00",
+  "updated": "2026-08-30T00:23:12.859196+00:00",
   "items": [
     {
       "section": "Today",
-      "date": "Saturday 29th August",
-      "title": "Mixed September Medal - Saturday"
-    },
-    {
-      "section": "Today",
-      "date": "Saturday 29th August",
-      "title": "Untouchables' 9-Hole - Front 9"
-    },
-    {
-      "section": "This Week",
       "date": "Sunday 30th August",
       "title": "Mixed Friendlies Squad Match at home to Holtye (Mixed Friendlies)"
     },
     {
-      "section": "This Week",
+      "section": "Today",
       "date": "Sunday 30th August",
       "title": "Mixed September Medal - Sunday"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Monday 31st August",
       "title": "Bank Holiday Mixed 9-Hole Team Standaside Scramble"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Tuesday 1st September",
       "title": "Hackers & Whackers' 9-Hole - Back 9 - Mixed Tees"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Wednesday 2nd September",
       "title": "Ladies' 18-Hole Autumn Festival Stubbs Medal"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Thursday 3rd September",
       "title": "Summer Series - Back Nine"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Friday 4th September",
       "title": "Seniors' 13-Hole Chris Ball Memorial"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Saturday 5th September",
       "title": "Mixed Autumn Festival Victory Cup Stableford"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Sunday 6th September",
       "title": "Mixed Autumn Festival Battle of Britain Bogey"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Sunday 6th September",
       "title": "Women's 9-Hole Roll-up"
+    },
+    {
+      "section": "Next Week",
+      "date": "Tuesday 8th September",
+      "title": "Hackers & Whackers' 9-Hole - Front 9 - Mixed Tees"
+    },
+    {
+      "section": "Next Week",
+      "date": "Wednesday 9th September",
+      "title": "Ladies' 18-Hole Autumn Festival Stubbs Foursomes"
+    },
+    {
+      "section": "Next Week",
+      "date": "Thursday 10th September",
+      "title": "Summer Series - Front Nine"
+    },
+    {
+      "section": "Next Week",
+      "date": "Friday 11th September",
+      "title": "Seniors' 13-Hole Hurricane Cup Stableford"
+    },
+    {
+      "section": "Next Week",
+      "date": "Saturday 12th September",
+      "title": "Mixed September Stableford"
+    },
+    {
+      "section": "Next Week",
+      "date": "Saturday 12th September",
+      "title": "Untouchables 9-Hole - Front 9"
+    },
+    {
+      "section": "Next Week",
+      "date": "Sunday 13th September",
+      "title": "Mixed September Stableford -- Sunday"
     }
   ]
 }
