@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-03T06:06:19.844983+00:00",
+  "updated": "2026-09-03T11:11:54.151107+00:00",
   "items": [
     {
       "section": "Today",
@@ -49,7 +49,7 @@
     {
       "section": "Next Week",
       "date": "Saturday 12th September",
-      "title": "Mixed September Stableford"
+      "title": "Mixed September Stableford - Saturday"
     },
     {
       "section": "Next Week",
@@ -59,7 +59,7 @@
     {
       "section": "Next Week",
       "date": "Sunday 13th September",
-      "title": "Mixed September Stableford -- Sunday"
+      "title": "Mixed September Stableford - Sunday"
     }
   ]
 }
