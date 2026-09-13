@@ -1,55 +1,80 @@
 {
-  "updated": "2026-09-12T22:36:42.199099+00:00",
+  "updated": "2026-09-13T00:21:52.586074+00:00",
   "items": [
     {
       "section": "Today",
-      "date": "Saturday 12th September",
-      "title": "Mixed September Stableford - Saturday"
-    },
-    {
-      "section": "Today",
-      "date": "Saturday 12th September",
-      "title": "Untouchables 9-Hole - Front 9"
-    },
-    {
-      "section": "This Week",
       "date": "Sunday 13th September",
       "title": "Mixed September Stableford - Sunday"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Tuesday 15th September",
       "title": "Hackers & Whackers' 9-Hole - Back 9 - Mixed Tees"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Wednesday 16th September",
       "title": "Ladies' 18-Hole Stableford Yellow Tees"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Thursday 17th September",
       "title": "Summer Series - Back Nine"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Friday 18th September",
       "title": "Society booking Tim Ruff"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Friday 18th September",
       "title": "Seniors' Captain's Day 9-Hole Stableford - Front 9"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Saturday 19th September",
       "title": "Untouchables 9-Hole - Back 9"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Sunday 20th September",
       "title": "President's Day"
+    },
+    {
+      "section": "Next Week",
+      "date": "Tuesday 22nd September",
+      "title": "Hackers & Whackers' 9-Hole - Front 9 - Mixed Tees"
+    },
+    {
+      "section": "Next Week",
+      "date": "Wednesday 23rd September",
+      "title": "Ladies' 18-Hole Sherry Stakes Medal"
+    },
+    {
+      "section": "Next Week",
+      "date": "Thursday 24th September",
+      "title": "Mixed Friendlies Squad Match away to Pyecombe (Mixed Friendlies)"
+    },
+    {
+      "section": "Next Week",
+      "date": "Thursday 24th September",
+      "title": "Senior's Friendlies Squad Match at home to Singing Hills (Senior's Friendlies)"
+    },
+    {
+      "section": "Next Week",
+      "date": "Thursday 24th September",
+      "title": "Summer Series - Front Nine"
+    },
+    {
+      "section": "Next Week",
+      "date": "Friday 25th September",
+      "title": "Seniors' 13-Hole Wassail Cup"
+    },
+    {
+      "section": "Next Week",
+      "date": "Saturday 26th September",
+      "title": "Untouchables 9-Hole - Front 9"
     }
   ]
 }
