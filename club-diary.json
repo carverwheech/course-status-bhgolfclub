@@ -1,50 +1,60 @@
 {
-  "updated": "2026-10-03T21:40:16.851056+00:00",
+  "updated": "2026-10-04T10:28:44.959916+00:00",
   "items": [
     {
       "section": "Today",
-      "date": "Saturday 3rd October",
-      "title": "Mixed October Medal - Saturday"
-    },
-    {
-      "section": "Today",
-      "date": "Saturday 3rd October",
-      "title": "Untouchables' 9-Hole - Back 9"
-    },
-    {
-      "section": "This Week",
       "date": "Sunday 4th October",
       "title": "Mixed October Medal - Sunday"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Tuesday 6th October",
       "title": "Seaford Head Ladies Society"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Tuesday 6th October",
       "title": "Hackers & Whackers' 9-Hole - Front 9 - Mixed Tees"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Wednesday 7th October",
       "title": "Ladies' Invitation"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Friday 9th October",
       "title": "Seniors' 9-Hole Stableford - Front 9 - Mixed Tees"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Saturday 10th October",
       "title": "Untouchables' 9-Hole - Front 9"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Sunday 11th October",
       "title": "Mixed Champagne Stakes"
+    },
+    {
+      "section": "Next Week",
+      "date": "Tuesday 13th October",
+      "title": "Hackers & Whackers' 9-Hole - Back 9 - Mixed Tees"
+    },
+    {
+      "section": "Next Week",
+      "date": "Wednesday 14th October",
+      "title": "Ladies' 18-Hole Stableford"
+    },
+    {
+      "section": "Next Week",
+      "date": "Saturday 17th October",
+      "title": "Captain's Autumn Charity Day"
+    },
+    {
+      "section": "Next Week",
+      "date": "Sunday 18th October",
+      "title": "Winter Pairs Competition (1/6)"
     }
   ]
 }
