@@ -1,20 +1,10 @@
 {
-  "updated": "2026-10-07T10:56:17.952393+00:00",
+  "updated": "2026-10-07T17:45:03.625485+00:00",
   "items": [
     {
       "section": "Today",
       "date": "Wednesday 7th October",
       "title": "Ladies' Invitation"
-    },
-    {
-      "section": "Today",
-      "date": "Wednesday 7th October",
-      "title": "Winter Pairs Competition F9 (1/6)"
-    },
-    {
-      "section": "Today",
-      "date": "Wednesday 7th October",
-      "title": "Winter Pairs Competition B9 (1/6)"
     },
     {
       "section": "This Week",
@@ -50,6 +40,16 @@
       "section": "Next Week",
       "date": "Saturday 17th October",
       "title": "Captain's Autumn Charity Day"
+    },
+    {
+      "section": "Next Week",
+      "date": "Sunday 18th October",
+      "title": "Winter Pairs Competition B9 (1/6)"
+    },
+    {
+      "section": "Next Week",
+      "date": "Sunday 18th October",
+      "title": "Winter Pairs Competition F9 (1/6)"
     },
     {
       "section": "Next Week",
