@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-08T23:07:25.635789+00:00",
+  "updated": "2026-10-09T11:12:30.867106+00:00",
   "items": [
     {
       "section": "Today",
@@ -14,7 +14,7 @@
     {
       "section": "This Week",
       "date": "Sunday 11th October",
-      "title": "Mixed Champagne Stakes"
+      "title": "Champagne Stakes"
     },
     {
       "section": "Next Week",
@@ -39,17 +39,17 @@
     {
       "section": "Next Week",
       "date": "Sunday 18th October",
+      "title": "Winter Pairs Competition (1/6)"
+    },
+    {
+      "section": "Next Week",
+      "date": "Sunday 18th October",
       "title": "Winter Pairs Competition F9 (1/6)"
     },
     {
       "section": "Next Week",
       "date": "Sunday 18th October",
       "title": "Winter Pairs Competition B9 (1/6)"
-    },
-    {
-      "section": "Next Week",
-      "date": "Sunday 18th October",
-      "title": "Winter Pairs Competition (1/6)"
     }
   ]
 }
