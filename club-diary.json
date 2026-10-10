@@ -1,50 +1,75 @@
 {
-  "updated": "2026-10-10T19:58:43.652863+00:00",
+  "updated": "2026-10-10T23:27:04.013903+00:00",
   "items": [
     {
       "section": "Today",
-      "date": "Saturday 10th October",
-      "title": "Untouchables' 9-Hole - Front 9"
-    },
-    {
-      "section": "This Week",
       "date": "Sunday 11th October",
       "title": "Champagne Stakes"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Tuesday 13th October",
       "title": "Hackers & Whackers' 9-Hole - Back 9 - Mixed Tees"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Wednesday 14th October",
       "title": "Ladies' 18-Hole Stableford"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Friday 16th October",
       "title": "Seniors' 9-Hole Stableford - Back 9 - Mixed Tees"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Saturday 17th October",
       "title": "Captain's Autumn Charity Day"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Sunday 18th October",
       "title": "Winter Pairs Competition (1/6)"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Sunday 18th October",
       "title": "Winter Pairs Competition F9 (1/6)"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Sunday 18th October",
       "title": "Winter Pairs Competition B9 (1/6)"
+    },
+    {
+      "section": "Next Week",
+      "date": "Tuesday 20th October",
+      "title": "Hackers & Whackers' 9-Hole - Front 9 - Mixed Tees"
+    },
+    {
+      "section": "Next Week",
+      "date": "Wednesday 21st October",
+      "title": "Ladies' 18-Hole Daily Mail Foursomes - Medal"
+    },
+    {
+      "section": "Next Week",
+      "date": "Friday 23rd October",
+      "title": "Seniors' 9-Hole Stableford - Front 9 - Shotgun Start"
+    },
+    {
+      "section": "Next Week",
+      "date": "Saturday 24th October",
+      "title": "Mixed October Stableford - Saturday"
+    },
+    {
+      "section": "Next Week",
+      "date": "Saturday 24th October",
+      "title": "Untouchables' 9-Hole - Front 9"
+    },
+    {
+      "section": "Next Week",
+      "date": "Sunday 25th October",
+      "title": "Mixed October Stableford - Sunday"
     }
   ]
 }
