@@ -1,50 +1,80 @@
 {
-  "updated": "2026-10-17T20:51:16.780707+00:00",
+  "updated": "2026-10-18T08:43:35.856158+00:00",
   "items": [
     {
       "section": "Today",
-      "date": "Saturday 17th October",
-      "title": "Captain's Autumn Charity Day"
-    },
-    {
-      "section": "This Week",
       "date": "Sunday 18th October",
       "title": "Winter Pairs Competition F9 (1/6)"
     },
     {
-      "section": "This Week",
+      "section": "Today",
       "date": "Sunday 18th October",
       "title": "Winter Pairs Competition B9 (1/6)"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Tuesday 20th October",
       "title": "Hackers & Whackers' 9-Hole - Winter Front 9 - Mixed Tees"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Wednesday 21st October",
       "title": "Ladies' 18-Hole Daily Mail Foursomes - Medal"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Friday 23rd October",
       "title": "Seniors' 9-Hole Texas Scramble - Front 9 - Shotgun Start"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Saturday 24th October",
       "title": "Mixed October Stableford - Saturday"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Saturday 24th October",
       "title": "Untouchables' 9-Hole - Front 9"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Sunday 25th October",
       "title": "Mixed October Stableford - Sunday"
+    },
+    {
+      "section": "Next Week",
+      "date": "Tuesday 27th October",
+      "title": "Hackers & Whackers' 9-Hole - Back 9 - Mixed Tees"
+    },
+    {
+      "section": "Next Week",
+      "date": "Wednesday 28th October",
+      "title": "Ladies' 18-Hole Halloween Matchplay"
+    },
+    {
+      "section": "Next Week",
+      "date": "Friday 30th October",
+      "title": "Halloween Night Golf"
+    },
+    {
+      "section": "Next Week",
+      "date": "Friday 30th October",
+      "title": "Seniors' 18-Hole Stableford"
+    },
+    {
+      "section": "Next Week",
+      "date": "Saturday 31st October",
+      "title": "Mixed November Medal - Saturday"
+    },
+    {
+      "section": "Next Week",
+      "date": "Saturday 31st October",
+      "title": "Untouchables' 9-Hole - Back 9"
+    },
+    {
+      "section": "Next Week",
+      "date": "Sunday 1st November",
+      "title": "Mixed November Medal - Sunday"
     }
   ]
 }
