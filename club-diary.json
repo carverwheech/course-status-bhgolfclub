@@ -1,55 +1,100 @@
 {
-  "updated": "2026-10-31T23:12:16.814943+00:00",
+  "updated": "2026-11-01T11:08:03.855506+00:00",
   "items": [
     {
       "section": "Today",
-      "date": "Saturday 31st October",
-      "title": "Mixed November Medal - Saturday"
-    },
-    {
-      "section": "Today",
-      "date": "Saturday 31st October",
-      "title": "Untouchables' 9-Hole - Back 9"
-    },
-    {
-      "section": "This Week",
       "date": "Sunday 1st November",
       "title": "Mixed November Medal - Sunday"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Tuesday 3rd November",
       "title": "Hackers & Whackers' 9-Hole - Front 9 - Mixed Tees"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Wednesday 4th November",
       "title": "Women's 9-Hole Flag, Autumn Lunch, Prize-giving & AGM"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Wednesday 4th November",
       "title": "Ladies' 9-Hole Flag"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Friday 6th November",
       "title": "Seniors' 18-Hole Winter Foursomes"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Saturday 7th November",
       "title": "Untouchables' Final and Kevin Livingston Memorial - Winter Front 9"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Sunday 8th November",
       "title": "Winter Pairs Competition F9 (2/6)"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Sunday 8th November",
       "title": "Winter Pairs Competition B9 (2/6)"
+    },
+    {
+      "section": "Next Week",
+      "date": "Monday 9th November",
+      "title": "Men’s Winter Foursomes K/O Knockout Begins"
+    },
+    {
+      "section": "Next Week",
+      "date": "Monday 9th November",
+      "title": "MIXED Winter Greensomes Knockout (mixed teams only) Begins"
+    },
+    {
+      "section": "Next Week",
+      "date": "Tuesday 10th November",
+      "title": "Hackers & Whackers' 9-Hole - Back 9 - Mixed Tees"
+    },
+    {
+      "section": "Next Week",
+      "date": "Wednesday 11th November",
+      "title": "Ladies' 18-Hole Daily Mail Foursomes -- Medal"
+    },
+    {
+      "section": "Next Week",
+      "date": "Friday 13th November",
+      "title": "Seniors - Winter Front 9 2026/7"
+    },
+    {
+      "section": "Next Week",
+      "date": "Friday 13th November",
+      "title": "Seniors - Winter Back 9 2026/7"
+    },
+    {
+      "section": "Next Week",
+      "date": "Friday 13th November",
+      "title": "Seniors' 9-Hole Stableford - Winter Back 9 - Mixed Tees"
+    },
+    {
+      "section": "Next Week",
+      "date": "Friday 13th November",
+      "title": "TBIS Golf Society"
+    },
+    {
+      "section": "Next Week",
+      "date": "Saturday 14th November",
+      "title": "Mixed November Stableford - Saturday"
+    },
+    {
+      "section": "Next Week",
+      "date": "Saturday 14th November",
+      "title": "Untouchables' 9-Hole - Back 9"
+    },
+    {
+      "section": "Next Week",
+      "date": "Sunday 15th November",
+      "title": "Mixed November Stableford - Sunday"
     }
   ]
 }
