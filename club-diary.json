@@ -1,70 +1,85 @@
 {
-  "updated": "2026-11-14T21:39:12.271429+00:00",
+  "updated": "2026-11-15T11:50:09.547224+00:00",
   "items": [
     {
       "section": "Today",
-      "date": "Saturday 14th November",
-      "title": "Mixed October Stableford - Saturday"
-    },
-    {
-      "section": "Today",
-      "date": "Saturday 14th November",
-      "title": "Mixed November Stableford - Saturday (AM)"
-    },
-    {
-      "section": "Today",
-      "date": "Saturday 14th November",
-      "title": "Untouchables' 9-Hole - Front 9"
-    },
-    {
-      "section": "Today",
-      "date": "Saturday 14th November",
-      "title": "Mixed November Stableford - Saturday (PM)"
-    },
-    {
-      "section": "This Week",
       "date": "Sunday 15th November",
       "title": "Mixed November Stableford - Sunday"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Tuesday 17th November",
       "title": "Hackers & Whackers' 9-Hole - Front 9 - Mixed Tees"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Wednesday 18th November",
       "title": "Ladies' 18-Hole Stableford"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Thursday 19th November",
       "title": "CLUB AGM"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Thursday 19th November",
       "title": "Society booking Milestones Golf Society"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Friday 20th November",
       "title": "Seniors' 9-Hole Stableford - Winter Front 9"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Saturday 21st November",
       "title": "Untouchables' 9-Hole - Front 9"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Sunday 22nd November",
       "title": "Winter Pairs Competition F9 (3/6)"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Sunday 22nd November",
       "title": "Winter Pairs Competition B9 (3/6)"
+    },
+    {
+      "section": "Next Week",
+      "date": "Monday 23rd November",
+      "title": "Seniors' 13-Hole Knockout Matchplay Cup Begins"
+    },
+    {
+      "section": "Next Week",
+      "date": "Tuesday 24th November",
+      "title": "Hackers & Whackers' 9-Hole - Back 9 - Mixed Tees"
+    },
+    {
+      "section": "Next Week",
+      "date": "Wednesday 25th November",
+      "title": "Ladies' 18-Hole Turkey Trot Stableford"
+    },
+    {
+      "section": "Next Week",
+      "date": "Friday 27th November",
+      "title": "Seniors' 9-Hole Stableford - Winter Back 9"
+    },
+    {
+      "section": "Next Week",
+      "date": "Saturday 28th November",
+      "title": "Society booking Languard Alarm Society"
+    },
+    {
+      "section": "Next Week",
+      "date": "Saturday 28th November",
+      "title": "Untouchables' 9-Hole - Back 9"
+    },
+    {
+      "section": "Next Week",
+      "date": "Sunday 29th November",
+      "title": "Mixed December Medal - Sunday"
     }
   ]
 }
