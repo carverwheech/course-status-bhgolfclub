@@ -1,55 +1,90 @@
 {
-  "updated": "2026-11-21T23:56:42.688736+00:00",
+  "updated": "2026-11-22T12:23:01.824253+00:00",
   "items": [
     {
       "section": "Today",
-      "date": "Saturday 21st November",
-      "title": "Untouchables' 9-Hole - Front 9"
-    },
-    {
-      "section": "This Week",
       "date": "Sunday 22nd November",
       "title": "Winter Pairs Competition F9 (3/6)"
     },
     {
-      "section": "This Week",
+      "section": "Today",
       "date": "Sunday 22nd November",
       "title": "Winter Pairs Competition B9 (3/6)"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Monday 23rd November",
       "title": "Seniors' 13-Hole Knockout Matchplay Cup Begins"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Tuesday 24th November",
       "title": "Hackers & Whackers' 9-Hole - Back 9 - Mixed Tees"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Wednesday 25th November",
       "title": "Ladies' 18-Hole Turkey Trot Stableford"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Friday 27th November",
       "title": "Seniors' 9-Hole Stableford - Winter Back 9"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Saturday 28th November",
       "title": "Society booking Languard Alarm Society"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Saturday 28th November",
       "title": "Untouchables' 9-Hole - Back 9"
     },
     {
-      "section": "Next Week",
+      "section": "This Week",
       "date": "Sunday 29th November",
       "title": "Mixed December Medal - Sunday"
+    },
+    {
+      "section": "Next Week",
+      "date": "Tuesday 1st December",
+      "title": "Hackers & Whackers' 9-Hole - Front 9 - Mixed Tees"
+    },
+    {
+      "section": "Next Week",
+      "date": "Tuesday 1st December",
+      "title": "Function Presentation for Brihota Golf Society"
+    },
+    {
+      "section": "Next Week",
+      "date": "Wednesday 2nd December",
+      "title": "Ladies' 18-Hole Christmas Greensomes"
+    },
+    {
+      "section": "Next Week",
+      "date": "Friday 4th December",
+      "title": "Seniors' 9-Hole Stableford - Winter Front 9"
+    },
+    {
+      "section": "Next Week",
+      "date": "Friday 4th December",
+      "title": "Annual Gala Dinner"
+    },
+    {
+      "section": "Next Week",
+      "date": "Saturday 5th December",
+      "title": "Mixed December Medal - Saturday"
+    },
+    {
+      "section": "Next Week",
+      "date": "Saturday 5th December",
+      "title": "Untouchables' 9-Hole - Front 9"
+    },
+    {
+      "section": "Next Week",
+      "date": "Sunday 6th December",
+      "title": "Drive-In 9-Hole Texas Scramble -- Shotgun Start"
     }
   ]
 }
